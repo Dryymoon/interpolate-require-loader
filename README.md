@@ -25,8 +25,8 @@ module.exports = {
     rules: [{
       test: /\.html$/,
       use: [
-        { loader: 'file-loader', options: { name: '[name].[ext]' } },
-        'require-loader',
+        'file-loader',
+        'interpolate-require-loader',
         'extract-loader',
         'html-loader'
       ]
